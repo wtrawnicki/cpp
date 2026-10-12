@@ -27,10 +27,11 @@ Nieprawidłowy priorytet powinien zostać odrzucony.
 Zaprojektuj klasę reprezentującą ogólne zadanie.
 
 Należy świadomie wykorzystać:
-
+````
 public
 protected
 private
+````
 Uczeń powinien potrafić wyjaśnić różnice między tymi poziomami dostępu oraz uzasadnić, dlaczego konkretne pole lub metoda znajduje się w danej sekcji.
 
 Należy zastosować konstruktor oraz destruktor.
@@ -38,13 +39,13 @@ Należy zastosować konstruktor oraz destruktor.
 # 3. Różne rodzaje zadań
 
 Program powinien obsługiwać przynajmniej trzy rodzaje zadań:
-
+```
 Zadanie proste — posiada podstawowe informacje o zadaniu.
 
 Zadanie terminowe — dodatkowo posiada termin wykonania.
 
 Zadanie cykliczne — posiada termin oraz informację, co ile dni zadanie jest powtarzane.
-
+````
 Należy wykorzystać dziedziczenie.
 
 # 4. Klasa abstrakcyjna i polimorfizm
@@ -52,67 +53,78 @@ Należy wykorzystać dziedziczenie.
 Ogólne zadanie powinno stanowić wspólną klasę bazową dla różnych rodzajów zadań.
 
 Należy zastosować funkcje:
-
+````
 virtual
+````
 oraz przynajmniej jedną funkcję czysto wirtualną:
-
+````
 virtual ... = 0;
+````
 Program powinien przechowywać różne rodzaje zadań we wspólnej kolekcji i obsługiwać je poprzez wskaźnik do klasy bazowej.
 
 Uczeń powinien umieć wyjaśnić:
-
+````
 czym jest polimorfizm,
 dlaczego używana jest funkcja virtual,
 czym jest klasa abstrakcyjna,
 czym jest funkcja czysto wirtualna,
 dlaczego destruktor klasy bazowej powinien być wirtualny.
+````
 
 # 5. Biblioteka standardowa
 
 Do przechowywania zadań należy wykorzystać:
-
+````
 std::vector
+````
 Do obsługi tekstu:
-
+````
 std::string
+````
 Przynajmniej w jednym miejscu należy przejść po vector za pomocą iteratora:
-
+````
 std::vector<...>::iterator
+````
 lub:
-
+````
 std::vector<...>::const_iterator
+````
 Uczeń powinien znać podstawowe operacje:
-
+````
 push_back()
 erase()
 begin()
 end()
 empty()
 size()
+````
 
 # 6. Dynamiczna pamięć
 
 W wersji edukacyjnej projektu należy wykorzystać klasyczne:
-
+````
 new
 delete
+````
 Przykładowo różne typy zadań mogą być przechowywane jako:
-
+````
 std::vector<Zadanie*>
+````
 Program nie powinien pozostawiać zaalokowanych obiektów po zakończeniu działania.
 
 Uczeń powinien umieć wyjaśnić:
-
+````
 co robi new,
 co robi delete,
 czym różni się obiekt od wskaźnika,
 dlaczego potrzebny jest destruktor menedżera,
 czym jest wyciek pamięci.
+````
 
 # 7. Menu konsolowe
 
 Program powinien posiadać czytelne menu, np.:
-
+````
 ===== MENEDZER ZADAN =====
 
 1. Dodaj zadanie proste
@@ -125,18 +137,21 @@ Program powinien posiadać czytelne menu, np.:
 0. Wyjscie
 
 Wybor:
+````
 Nieprawidłowe dane wejściowe nie powinny powodować zakończenia programu.
 
 # 8. Obsługa wyjątków
 
 Należy zastosować przynajmniej jeden wyjątek, np. dla:
-
+````
 nieprawidłowego priorytetu,
 nieprawidłowego okresu zadania cyklicznego,
 problemu z plikiem.
+````
 Przykładowe elementy:
-
+````
 throw std::invalid_argument(...);
+````
 oraz:
 
 ````
